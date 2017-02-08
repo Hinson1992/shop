@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<filter>
+    <filter-name>EncodingFilter1</filter-name>
+    <filter-class>com.netbook.util.EncodingFilter1</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>liang</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+  <!-- author wuliang  begin  -->
+     <filter>
+    <filter-name>liang</filter-name>
+    <filter-class>com.netbook.comm.MyFilter</filter-class>
+  </filter>
+     
+  
+  <!-- author wuliang  end
+  
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>com.netbook.categary.util.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+   -->
+	<!-- <filter>
+		<filter-name>EncodingFilter</filter-name>
+		<filter-class>cn.itcast.filter.EncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping> -->
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>cn.itcast.goods.user.web.servlet.UserServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>VerifyCodeServlet</servlet-name>
+    <servlet-class>cn.itcast.vcode.servlet.VerifyCodeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CartServlert</servlet-name>
+    <servlet-class>com.netbook.cart.web.CartServlert</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BookServlert_book</servlet-name>
+    <servlet-class>com.netbook.book.web.BookServlert</servlet-class>
+  </servlet>
+
+
+  <servlet>
+    <servlet-name>RegistServlet</servlet-name>
+    <servlet-class>com.netbook.user.servlet.RegistServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>RegistServlet</servlet-name>
+    <url-pattern>/regist.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>VerifyCodeServlet</servlet-name>
+    <url-pattern>/VerifyCodeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CartServlert</servlet-name>
+    <url-pattern>/CartServlert.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookServlert_book</servlet-name>
+    <url-pattern>/BookServlert.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>UserServlet1</servlet-name>
+    <servlet-class>com.netbook.bigmal.UserServlet1</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>UserServlet1</servlet-name>
+    <url-pattern>/UserServlet1</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+    <servlet-name>CategaryServlet</servlet-name>
+    <servlet-class>com.netbook.categary.web.CategaryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BookServlet</servlet-name>
+    <servlet-class>com.netbook.categary.web.BookServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CategaryServlet</servlet-name>
+    <url-pattern>/categary.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookServlet</servlet-name>
+    <url-pattern>/book.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- luoyinan -->
+   <!-- 统计的 -->
+  <servlet>
+    <servlet-name>CountServlet</servlet-name>
+    <servlet-class>com.netbook.count.servlet.CountServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CountServlet</servlet-name>
+    <url-pattern>/count/CountServlet</url-pattern>
+  </servlet-mapping>
+   <!-- 修改密码的 -->
+  <servlet>
+    <servlet-name>ModifyPwdServlet</servlet-name>
+    <servlet-class>com.netbook.user.servlet.ModifyPwdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModifyPwdServlet</servlet-name>
+    <url-pattern>/user.do</url-pattern>
+  </servlet-mapping>
+  <!-- luoyinan -->
+  
+  <!-- author wuliang  begin -->
+  <servlet>
+    <servlet-name>OrderServlet</servlet-name>
+    <servlet-class>com.netbook.order.web.OrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderServlet</servlet-name>
+    <url-pattern>/order/OrderServlet</url-pattern>
+  </servlet-mapping>
+  <!-- author wuliang  begin -->
+  
+</web-app>
+  
